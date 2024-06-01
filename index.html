@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html>
+  <head itemscope itemtype="http://schema.org/WebSite">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+
+    <meta name="robots" content="noindex, nofollow">
+    <title itemprop="name">Savings</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href='screen.css' rel='stylesheet' type='text/css' />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon64.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="/images/favicon144.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/images/favicon128.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon192.png">
+    <link rel="icon" type="image/png" sizes="120x120" href="/images/favicon120.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="/images/favicon180.png">
+  </head>
+  <body>
+    <section class="total">
+      <h1 id="total" onClick="toggleHistory()">$0</h1>
+      <div id="progress"></div>
+    </section>
+
+    <section id="history">
+      <a href="#" id="close-btn" onClick="toggleHistory()">Close</a>
+      <div class="wrapper">
+        <h2>History</h2>
+        <ol>
+          <li>Tue, July 12</li>
+          <li>Sun, July 17</li>
+          <li>Fri, July 22</li>
+          <li>Wed, July 27</li>
+          <li>Mon, August 2</li>
+          <li>Sat, August 7</li>
+        </ol>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      var GOAL = 600;
+      var PAYMENT_PER = 20;
+      var items = document.getElementById("history");
+      var numberOfItems = document.getElementsByTagName('li').length
+      var height = numberOfItems * PAYMENT_PER / GOAL * 100;
+      var progress = document.getElementById("total").textContent = "$" + numberOfItems * PAYMENT_PER;
+      var total = document.getElementById("progress").setAttribute('style', "height :" + height + "%");
+
+      var toggleHistory = function () {
+        document.getElementById("history").classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

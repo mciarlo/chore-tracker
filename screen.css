@@ -1,0 +1,206 @@
+﻿a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+summary,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+
+html, body {
+	font-family: "Inter", sans-serif;
+	font-size: 14px;
+	overflow: hidden;
+	background: white;
+}
+
+h1, h2 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.wrapper {
+	width: 88%;
+	margin: 0 auto;
+}
+
+#close-btn,
+#close-btn:visited {
+	text-transform: uppercase;
+	text-decoration: none;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	color: #000;
+	background: rgba(0,0,0,0.9) url('images/close.svg') center center no-repeat;
+	border-radius: 30px;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	font-size: 0;
+	transform: translate3d(-50%, 0px, 0px);
+}
+
+section {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+section.total {
+	text-align: center;
+	position: relative;
+
+}
+
+li {
+	padding: 2em 0 2em 40px;
+	border-bottom: 1px solid #eaeaea;
+	background: transparent url(images/verified.svg) left center no-repeat;
+}
+
+h1 {
+	font-size: 68px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 9998;
+	font-weight: 500;
+	transform: translate3d(-50%, -60%, 0px);
+}
+
+h2 {
+	font-size: 38px;
+	padding: 1em 0;
+	font-weight: 500;
+}
+
+#progress {
+	background: #FDCA48;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#history {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transform: translate3d(0px, 100%, 0px);
+	transition: transform 200ms ease-in-out;
+}
+
+#history.active {
+	transform: translate3d(0px, 0px, 0px);
+}
