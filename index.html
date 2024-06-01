@@ -30,7 +30,7 @@
     </section>
 
     <section id="history">
-      <a href="#" id="close-btn" onClick="toggleHistory()">Close</a>
+      <a href="javascript:;" id="close-btn" onClick="toggleHistory()">Close</a>
       <div class="wrapper">
         <h2>History</h2>
         <ol>
@@ -54,7 +54,6 @@
       var total = document.getElementById("progress").setAttribute('style', "height :" + height + "%");
 
       var toggleHistory = function (ev) {
-        ev.preventDefault();
         document.getElementById("history").classList.toggle("active");
       };
     </script>
