@@ -242,7 +242,7 @@ h2 {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	transform: translate3d(0px, 100%, 0px);
-	transition: transform 200ms ease-in-out;
+	transition: transform 400ms cubic-bezier(1, 0, 0, 1);
 	box-sizing: border-box;
 	padding-bottom: 120px;
 }
