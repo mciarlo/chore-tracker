@@ -126,21 +126,48 @@ h2 {
 	margin: 0 auto;
 }
 
-#close-btn,
-#close-btn:visited {
+#toggle-btn,
+#toggle-btn:visited {
 	text-transform: uppercase;
 	text-decoration: none;
 	position: absolute;
 	bottom: 50px;
 	left: 50%;
-	color: #000;
-	background: rgba(0,0,0,0.9) url('images/close.svg') center center no-repeat;
+	background: rgba(0, 0, 0, 0.05);
 	border-radius: 30px;
 	width: 60px;
 	height: 60px;
-	text-indent: -9999px;
-	font-size: 0;
 	transform: translate3d(-50%, 0px, 0px);
+	z-index: 9999;
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
+}
+
+#toggle-btn .hamburger-inner,
+#toggle-btn span:before,
+#toggle-btn span:after {
+	width: 30px;
+	border-width: 2px;
+	height: 3px;
+}
+
+#toggle-btn .hamburger-inner {
+	margin-top: 0px;
+}
+
+#toggle-btn .hamburger-box {
+	transform: scale3d(0.8, 0.8, 1.0);
+	width: 32px;
+}
+
+#card {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background: #f1f1f1;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
 }
 
 section {
@@ -152,25 +179,41 @@ section {
 section.total {
 	text-align: center;
 	position: relative;
-
+	padding: 10px;
+	box-sizing: border-box;
 }
 
 li {
 	padding: 2em 0 2em 40px;
 	border-bottom: 1px solid #eaeaea;
-	background: transparent url(images/verified.svg) left center no-repeat;
+	background: transparent url(images/done.svg) left center no-repeat;
 }
 
-h1 {
-	font-size: 100px;
+li.upcoming {
+	background-image: url(images/pending.svg);
+}
+
+.floating-content {
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	z-index: 9998;
+	transform: translate3d(-50%, -70%, 0px);
+}
+
+.floating-content p {
+	margin-top: 1em;
+	line-height: 1;
+	color: #999;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1 {
+	font-size: 100px;
+	display: block;
 	font-weight: 500;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	transform: translate3d(-50%, -70%, 0px);
 }
 
 h2 {
@@ -195,11 +238,13 @@ h2 {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	z-index: 9999;
+	z-index: 9998;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	transform: translate3d(0px, 100%, 0px);
 	transition: transform 200ms ease-in-out;
+	box-sizing: border-box;
+	padding-bottom: 120px;
 }
 
 #history.active {
